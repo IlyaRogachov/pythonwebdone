@@ -13,13 +13,13 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ian:rognarock@localhost/iandb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ian:rognarock@mysql.default.svc.cluster.local/iandb'
 db = SQLAlchemy(app)
 UPLOAD_FOLDER = '.'
 ALLOWED_EXTENSIONS = set(['csv'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-mydb = MySQLdb.connect(host='localhost',
+mydb = MySQLdb.connect(host='mysql.default.svc.cluster.local',
     user='ian',
     passwd='rognarock',
     db='iandb')
