@@ -122,7 +122,7 @@ initializationFiles:
     CREATE DATABASE IF NOT EXISTS  iandb;
   second-db.sql: |-
     use iandb;
-    CREATE TABLE Data ( ID int NOT NULL AUTO_INCREMENT, Sku varchar(255) NOT NULL, Name varchar(255), Price varchar(255), PRIMARY KEY (ID) );
+    CREATE TABLE item ( ID int NOT NULL AUTO_INCREMENT, Sku varchar(255) NOT NULL, Name varchar(255), Price varchar(255), PRIMARY KEY (ID) );
 
 metrics:
   enabled: false
